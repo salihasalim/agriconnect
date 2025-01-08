@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriconnect - Login</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-image: url(../static/images/imglogin.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 200%;
+            
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #4CAF50; /* Green for agriculture theme */
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #45a049; /* Slightly darker green for hover */
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049; /* Green hover effect */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            nav {
+                text-align: left;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="container">
+        <h2>Login to Agriconnect</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Login">
+            <!-- <a href="{%url 'reset'%}">Forgot Password?</a> -->
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Agriconnect | All Rights Reserved</p>
+    </div>
+</body>
+</html>

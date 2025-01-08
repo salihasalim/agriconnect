@@ -1,0 +1,90 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriconn3ct</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container{
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+            background-image: url('https://www.vecteezy.com/photo/49683549-fresh-vegetables-in-a-market-stall.jpg');
+            background-size: cover; /* Ensure the image covers the whole container */
+            background-position: center; /* Center the image */
+             background-repeat: no-repeat; /* Prevent tiling of the image */
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Agriconnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'about'%}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'productadd'%}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_profile' %}">Create Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'view_profile' %}">View Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{%url 'signout'%}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Body Section -->
+    <div class="container mt-5">
+        <center><h2>Welcome {{request.user}}</h2></center>
+        <div class="row p-5">
+            <div class="col-md-6 p-5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">View Products</h5>
+                        <p class="card-text">Explore the list of products available for purchase.</p>
+                        <a href="{%url 'productlist'%}" class="btn btn-success">Go to Products</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">View Orders</h5>
+                        <p class="card-text">Track and manage your orders efficiently.</p>
+                        <a href="#" class="btn btn-primary">Go to Orders</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+

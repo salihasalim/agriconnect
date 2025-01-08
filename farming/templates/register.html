@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url('https://www.google.com/imgres?q=high%20resolution%20vegetable%20and%20fruits%20background&imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F03%2F14%2F32%2F75%2F360_F_314327589_cWohy9OteIPjoa3kBbuCWRduTZejhekA.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dvegetables%2Bbackground&docid=Omm415teK0czpM&tbnid=F43aXwVtreFkXM&vet=12ahUKEwiK8qLyybaKAxV31jgGHQ1xMcg4FBAzegQIVxAA..i&w=878&h=360&hcb=2&ved=2ahUKEwiK8qLyybaKAxV31jgGHQ1xMcg4FBAzegQIVxAA');
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Styling */
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h2 {
+            color: #5a5a5a;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Form Elements Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Error Messages */
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* Additional Styling for the Form */
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        /* Add spacing between form elements */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }} <!-- Render the form fields as paragraphs -->
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+ -->
+
+
+
+
+
+      

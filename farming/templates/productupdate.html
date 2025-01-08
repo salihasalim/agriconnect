@@ -1,0 +1,57 @@
+
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+        body {
+            background-image: url('https://www.google.com/imgres?q=hd%20image%20for%20a%20registration%20page%20in%20vegetables%20and%20fruit%20selling%20website&imgurl=https%3A%2F%2Fcdn.britannica.com%2F39%2F187439-050-35BA4DCA%2FBroccoli-florets.jpg&imgrefurl=https%3A%2F%2Fwww.britannica.com%2Ftopic%2Fvegetable&docid=s6d9O2zDiOMrvM&tbnid=Pog64RG6srGmYM&vet=12ahUKEwj_hMLMysmKAxX1yzgGHfUdLUk4ChAzegQIdRAA..i&w=1600&h=1180&hcb=2&ved=2ahUKEwj_hMLMysmKAxX1yzgGHfUdLUk4ChAzegQIdRAA'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4>Update Form</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            
+                            <div class="mb-3">
+                                {{ form.as_p }}
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

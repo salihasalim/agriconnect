@@ -1,0 +1,140 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agriconnect - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        /* Hero Section (Second Div) */
+        .hero-section {
+            background-image: url('https://as2.ftcdn.net/v2/jpg/03/20/39/81/1000_F_320398182_1X1ebszxgKyeS6j291ywWYIw1dfRLETC.jpg'); /* Replace with actual image URL */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* About Section (Third Div) */
+        .about-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        /* Auth Section (Fourth Div) */
+        .auth-section {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #e9ecef;
+        }
+
+        .auth-btn {
+            margin: 10px;
+            font-size: 16px;
+            padding: 12px 30px;
+        }
+
+        /* Custom button styles */
+        .btn-login {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background-color: #218838;
+        }
+
+        .btn-register {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-register:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First Div: Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Agriconnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'signin'%}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'signup'%}">Register</a>
+                    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'signout'%}">Logout</a>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Div: Hero Section with Image -->
+    <section class="hero-section">
+        <div class="container background-image:url('./sta')">
+            <h1>Welcome to Agriconnect</h1>
+            <p>Connecting farmers and buyers for a sustainable future</p>
+            </div>
+    </section>
+
+    <!-- Third Div: About Agriconnect -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Welcome To Agriconnect</h2>
+            <p>Agriconnect is dedicated to connecting farmers, agricultural professionals, and stakeholders globally. We provide tools, resources, and insights to help grow sustainable agriculture practices while promoting knowledge sharing across the industry.it is a platform dedicated to revolutionizing the agricultural industry by connecting farmers, buyers, and other stakeholders. Our mission is to bridge the gap between agricultural producers and markets, fostering seamless communication and transactions.
+
+At Agriconnect, we aim to:
+
+Empower farmers by providing them with direct access to buyers and fair market opportunities.
+
+Enable buyers to discover fresh, high-quality produce directly from trusted sources.
+
+Promote sustainable agricultural practices through streamlined supply chain solutions.
+
+
+With Agriconnect, we strive to create a transparent, efficient, and collaborative ecosystem that benefits everyone involved in the agricultural value chain. Join us in transforming agriculture into a more connected and inclusive industry!</p>
+        </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Agriconnect. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

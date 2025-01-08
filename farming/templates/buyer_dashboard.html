@@ -1,0 +1,228 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriconnect - Buyer Dashboard</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #4CAF50;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #45a049;
+            border-radius: 5px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: #333;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Dashboard Content Styling */
+        .dashboard-content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #777;
+        }
+
+        .card .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .card .button:hover {
+            background-color: #45a049;
+        }
+
+        /* Profile Section */
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+        .profile-info .details {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        .profile-info .details h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-info .details p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .logout {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .logout:hover {   
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+   Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">Agriconnect</a></li>
+            <li><a href="{%url 'home'%}">Home</a></li>
+            <li><a href="{%url 'about'%}">About</a></li>
+            <li><a href="{%url 'mywishlist'%}">Wishlist</a></li>
+            <li><a href="{%url 'signout'%}">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="{%url 'mywishlist'%}">My wishlist</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="{%url 'buyerproductlist'%}">Products</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Dashboard Content -->
+    <div class="dashboard-content">
+        <div class="profile-info">
+            
+            <div class="details">
+                <h2>{{request.user}}</h2>
+                <p>Email: {{request.user.email}}</p>
+                
+            </div>
+            <button class="logout">Logout</button>
+        </div>
+
+        <!-- Card Section -->
+        <div class="card">
+            <h3>My Orders</h3>
+            <p>View and manage your orders</p>
+            <a href="#" class="button">View Orders</a>
+        </div>
+
+        <div class="card">
+            <h3>Transactions</h3>
+            <p>View your purchase history and transaction details</p>
+            <a href="#" class="button">View Transactions</a>
+        </div>
+
+        <div class="card">
+            <h3>Settings</h3>
+            <p>Manage your account settings and preferences</p>
+            <a href="#" class="button">Go to Settings</a>
+        </div>
+    </div>
+
+</body>
+</html>        

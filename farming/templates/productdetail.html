@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div>
+        <h3 class="text-lg font-bold text-gray-900 sm:text-xl">
+            {{product.name}}
+          </h3>
+          <p class="mt-1 text-xs font-medium text-gray-600">{{product.price}}</p>
+
+          <div class="hidden sm:block sm:shrink-0">
+            <img
+              alt=""
+              src="{{}}"
+              class="size-16 rounded-lg object-cover shadow-sm"
+            />
+          </div>
+
+          <div class="mt-4">
+            <p class="text-pretty text-sm text-gray-500">
+              {{product.owner}}
+              <p>{{product.tags}}</p>
+              <P>{{product.product_category}}</P>
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+  
+
+
+</div>
+
+
+
+<dl class="mt-6 flex gap-4 sm:gap-6">
+<div class="flex flex-col-reverse">
+  <dt class="text-sm font-medium text-gray-600">{{data.price}}</dt>
+  <dd class="text-xs text-gray-500">{{data.created_date}}|date</dd>
+</div>
+<div class="hidden sm:block sm:basis-56">
+    {% video data.thumbnail '400x200' %}
+</div>
