@@ -151,7 +151,7 @@ def add_profile(request):
             profile = form.save(commit=False)
             print(request.user)
             if request.user.is_authenticated:
-                profile.user = request.user
+                form.instance.owner = request.user
                 
                 profile.save()
                 return redirect('view_profile')
@@ -529,6 +529,13 @@ class PaymentVerificationView(View):
             order_id=request.POST.get("razorpay_order_id")
 
             Order.objects.filter(order_id=order_id).update(is_paid=True)
+
+            # order=Order.objects.get(order_id=order_id)
+
+            # self.send_confirmation_email(order)
+
+
+
             
            
         except:

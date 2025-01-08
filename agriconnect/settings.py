@@ -142,3 +142,9 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'salishamnas215@gmail.com'
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://api.razorpay.com",  # Razorpay domain
+    "http://127.0.0.1",         # Local development (if applicable)
+    "https://your-domain.com",  # Your production domain
+]

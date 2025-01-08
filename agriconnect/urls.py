@@ -45,6 +45,7 @@ urlpatterns = [
     path("checkout/",views.CheckOutView.as_view(),name='checkout'),
     path('add-profile/', views.add_profile, name='add_profile'),
     path('view-profile/', views.view_profile, name='view_profile'),
+    path('payment/verify',views.PaymentVerificationView.as_view)
 
 ]
 if settings.DEBUG:
